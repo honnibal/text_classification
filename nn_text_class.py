@@ -10,12 +10,6 @@ import plac
 import spacy.en
 
 
-from keras.models import Sequential
-from keras.layers.core import Dense, Dropout, Activation
-from keras.optimizers import SGD
-from keras.regularizers import l2
-
-
 def read_data(nlp, data_dir):
     for subdir, label in (('pos', 1), ('neg', 0)):
         for filename in (data_dir / subdir).iterdir():
