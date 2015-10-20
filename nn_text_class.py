@@ -1,3 +1,9 @@
+"""
+Feed-forward neural network with word dropout, following
+Iyyer et al. 2015,
+Deep Unordered Composition Rivals Syntactic Methods for Text Classification
+https://www.cs.umd.edu/~miyyer/pubs/2015_acl_dan.pdf
+"""
 from __future__ import unicode_literals
 from __future__ import print_function
 from __future__ import division
@@ -156,8 +162,6 @@ class Adagrad(object):
         self.learning_rate = lr
         self.rho = rho
         # stores sum of squared gradients 
-        #self.h = numpy.zeros(self.dim)
-        #self._curr_rate = numpy.zeros(self.h.shape)
         self.h = None
         self._curr_rate = None
     
